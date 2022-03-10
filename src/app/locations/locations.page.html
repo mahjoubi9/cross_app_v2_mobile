@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-button slot="start">
+      <ion-menu-button ></ion-menu-button>
+    </ion-button>
+    <ion-buttons slot="end">
+      <ion-button (click)="onNewLocation()">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Locations
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let p  of locations">
+      <ion-label>Title : </ion-label>
+      <ion-label (click)="onDetails(p)">{{p.title}}</ion-label>
+        <ion-icon (click)="onRemove(p)" name="close" slot="end" ></ion-icon>
+    </ion-item>
+  </ion-list>
+  <form>
+    <ion-item>
+      <ion-input type="text" name="go" placeholder="Username" [(ngModel)]="go"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="gofonction()">Login</ion-button>
+    <ion-button expand="block" (click)="getallStorage()">GetAll</ion-button>
+    <ion-button expand="block" (click)="getOneStorage()">Getgo</ion-button>
+  </form>
+</ion-content>

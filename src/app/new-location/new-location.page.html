@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-button slot="start">
+      <ion-menu-button ></ion-menu-button>
+    </ion-button>
+    <ion-title>
+      new Location
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="form">
+    <ion-list>
+      <ion-item>
+        <ion-label>Tilte : </ion-label>
+        <ion-input type="text" [(ngModel)]="location.title" name="location.title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>City : </ion-label>
+        <ion-input type="text" [(ngModel)]="location.city" name="location.city"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Country : </ion-label>
+        <ion-input type="text" [(ngModel)]="location.country" name="location.country"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Keywords : </ion-label>
+        <ion-input type="text" [(ngModel)]="location.Keywords" name="keywords"></ion-input>
+      </ion-item>
+      <ion-item>
+      <ion-button  (click)="onAddLocation()">Save</ion-button>
+        </ion-item>
+    </ion-list>
+  </form>
+
+</ion-content>
